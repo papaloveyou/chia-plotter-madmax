@@ -167,8 +167,7 @@ phase4::output_t create_plot(	const int k,
 		}
 		bls::Util::Hash256(params.id.data(), bytes.data(), bytes.size());
 	}
-	const std::string plot_name = "plot-k" + std::to_string(k) + "-" + get_date_string_ex("%Y-%m-%d-%H-%M")
-			+ "-" + bls::Util::HexStr(params.id.data(), params.id.size());
+	const std::string plot_name = get_date_string_ex("%Y-%m-%d-%H-%M") + "-" + bls::Util::HexStr(params.id.data(), params.id.size());
 	
 	std::cout << "Working Directory:   " << (tmp_dir.empty() ? "$PWD" : tmp_dir) << std::endl;
 	std::cout << "Working Directory 2: " << (tmp_dir_2.empty() ? "$PWD" : tmp_dir_2) << std::endl;
