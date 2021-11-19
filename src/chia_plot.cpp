@@ -497,7 +497,7 @@ int _main(int argc, char** argv)
 		if(final_dir != tmp_dir)
 		{
 			if(!directout) {
-				const auto dst_path = final_dir + out.params.plot_name + ".plot";
+				const auto dst_path = final_dir + out.params.plot_name + ".db";
 				std::cout << "Started copy to " << dst_path << std::endl;
 				copy_thread.take_copy(std::make_pair(out.plot_file_name, dst_path));
 				if(waitforcopy) {
