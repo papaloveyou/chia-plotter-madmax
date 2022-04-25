@@ -13,7 +13,7 @@ on:
 
 jobs:
   build-debug:
-    runs-on: [[ARM64, Linux]]
+    runs-on: [ARM64, Linux]
 
     steps:
     - uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
           ${{github.workspace}}/build/chia_plot_k34
 
   build-release:
-    runs-on: [[ARM64, Linux]]
+    runs-on: [ARM64, Linux]
 
     steps:
     - uses: actions/checkout@v2
